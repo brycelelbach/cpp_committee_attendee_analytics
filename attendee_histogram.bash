@@ -1,6 +1,6 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
-# Copyright (c) 2020 NVIDIA Corporation
+# Copyright (c) 2020-2021 NVIDIA Corporation
 #
 # Distributed under the Boost Software License v1.0 (boost.org/LICENSE_1_0.txt)
 

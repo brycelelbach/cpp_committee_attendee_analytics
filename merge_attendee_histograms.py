@@ -1,13 +1,15 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
-# Copyright (c) 2020 NVIDIA Corporation
+# Copyright (c) 2020-2021 NVIDIA Corporation
 #
 # Distributed under the Boost Software License v1.0 (boost.org/LICENSE_1_0.txt)
 
 import argparse
 import csv
 
-parser = argparse.ArgumentParser(description='Combine attendee histograms.')
+parser = argparse.ArgumentParser(
+  description='Combine attendee histograms.'
+)
 parser.add_argument(
   'input', metavar='N', type=str, nargs='+',
   help='A CSV file containing data in the format "name,count".'
