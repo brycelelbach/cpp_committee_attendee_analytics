@@ -39,8 +39,8 @@ make_report 2020_04_06_to_2021_10_22_iso_cpp_remote__language_evolution \
 make_report 2020_10_28_to_2021_02_17_iso_cpp_remote__language_evolution \
   $(ls -1 data/{2020_{10_28,11,12},2021_{01,02_{03,11,17}}}*__language_evolution__attendance.md)
 
-make_report 2021_02_25_to_2021_05_20_iso_cpp_remote__language_evolution \
-  $(ls -1 data/2021_{02_25,03,04,05_{06,12,20}}*__language_evolution__attendance.md)
+make_report 2021_02_25_to_2021_05_26_iso_cpp_remote__language_evolution \
+  $(ls -1 data/2021_{02_25,03,04,05_{06,12,20,26}}*__language_evolution__attendance.md)
 
 make_report iso_cpp_remote__language_evolution \
   $(ls -1 data/*__language_evolution__attendance.md)
