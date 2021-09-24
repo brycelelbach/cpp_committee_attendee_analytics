@@ -10,7 +10,7 @@ Language Evolution attendance data.
 * `merge_attendee_histograms.py input0 [input1 ...]`: Combines multiple
   CSV files in the format `Name,# of Meetings` into a single CSV file in the
   format `Name,# of Meetings (input0)[,# of Meetings (input1) ...])`.
-* `report_attendance.bash input0 [input1...]`: Prints out the dates and number
+* `attendance.bash input0 [input1...]`: Prints out the dates and number
   of attendees for the inputs in the foramt `Date,# of Attendees`.
 * `count.py [input0]`: Prints out the number of rows in a CSV file.
   Reads from stdin if no file is provided.
