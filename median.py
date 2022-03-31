@@ -10,20 +10,19 @@ import sys
 import statistics
 
 parser = argparse.ArgumentParser(
-  description='Compute the median of the second column of a CSV file.'
+  description='Compute the median of the last column of a CSV file.'
 )
 parser.add_argument(
   'input', metavar='N', type=str, nargs='?',
-  help='A CSV file containing data in the format "name,count".'
+  help='A CSV file containing data in the format "...,number".'
 )
 args = parser.parse_args()
 
 data = []
 
-with open(args.input) if args.input else sys.stdin as csvfile:
-  reader = csv.reader(csvfile)
-  for attendee in csv.reader(csvfile):
-    data.append(int(attendee[1]))
+with open(args.input) if args.input else sys.stdin as file:
+  for entry in csv.reader(file):
+    data.append(int(entry[-1]))
 
 print(round(statistics.median(data), 2))
 
