@@ -13,8 +13,8 @@ make_report() {
   shift # Clear the first argument.
   local INPUTS="${@}"
   mkdir -p reports
-  ./attendance.bash ${INPUTS} > reports/${OUTPUT}__attendance.csv
-  ./attendee_histogram.bash ${INPUTS} > reports/${OUTPUT}__attendees.csv
+  ./make_attendance.bash ${INPUTS} > reports/${OUTPUT}__attendance.csv
+  ./make_attendee_histogram.bash ${INPUTS} > reports/${OUTPUT}__attendees.csv
   echo "${OUTPUT}:"
   echo "# of Telecons:                $(./count.py reports/${OUTPUT}__attendance.csv)"
   echo "Mean Attendees Per Telecon:   $(./mean.py reports/${OUTPUT}__attendance.csv)"

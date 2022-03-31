@@ -3,9 +3,9 @@ Language Evolution attendance data.
 
 * `make_reports.bash`: Creates attendee reports and analytics for all
   attendance data in `data`.
-* `attendee_histogram.bash input0 [input1 ...]`: Prints out an attendee
+* `make_attendee_histogram.bash input0 [input1 ...]`: Prints out an attendee
   histogram in CSV format: `Attendee,# of Meetings`.
-* `attendance.bash input0 [input1 ...]:` Prints out the attendance count
+* `make_attendance.bash input0 [input1 ...]:` Prints out the attendance count
   in CSV format: `Date of Meeting,# of Attendees`.
 * `check_attendee_uniqueness.bash`: Check whether the names in the first column
   of a CSV file are unique.
