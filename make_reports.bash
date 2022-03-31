@@ -4,6 +4,10 @@
 #
 # Distributed under the Boost Software License v1.0 (boost.org/LICENSE_1_0.txt)
 
+SCRIPT_PATH=$(cd $(dirname ${0}); pwd -P)
+
+cd ${SCRIPT_PATH}
+
 make_report() {
   local OUTPUT="${1}"
   shift # Clear the first argument.
@@ -77,4 +81,6 @@ make_report iso_cpp_remote__language_evolution \
   reports/iso_cpp_remote__library_evolution__attendees.csv \
   reports/iso_cpp_remote__language_evolution__attendees.csv \
   > reports/iso_cpp_remote__attendees.csv
+
+./check_attendee_uniqueness.bash reports/iso_cpp_remote__attendees.csv
 
