@@ -12,17 +12,16 @@ parser = argparse.ArgumentParser(
   description='Count the number of rows in a CSV file.'
 )
 parser.add_argument(
-  'input', metavar='N', type=str, nargs='?',
+  'input', metavar='input', type=str, nargs='?',
   help='A CSV file containing data in the format "name,count".'
 )
 args = parser.parse_args()
 
-length = 0
+count = 0
 
-with open(args.input) if args.input else sys.stdin as csvfile:
-  reader = csv.reader(csvfile)
-  for attendee in csv.reader(csvfile):
-    length += 1
+with open(args.input) if args.input else sys.stdin as file:
+  for entry in csv.reader(file):
+    count += 1
 
-print(length)
+print(count)
 
